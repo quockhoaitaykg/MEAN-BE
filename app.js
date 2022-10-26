@@ -2,10 +2,12 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const typeRouter = require("./routes/TypeRoute");
+const equipmentRouter = require("./routes/EquipmentRoute");
  
 //middleware
 app.use(express.json());
 app.use("/api/types", typeRouter);
+app.use("/api/equipments", equipmentRouter);
  
 app.listen(3001, () => {
   console.log("Server is running on port 3001");
