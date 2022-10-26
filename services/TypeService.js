@@ -7,7 +7,7 @@ exports.getAllTypes = async () => {
 exports.createType = async (p) => {
   return await typeModel.create(p);
 };
-exports.getTypeyId = async (id) => {
+exports.getTypeById = async (id) => {
   return await typeModel.findById(id);
 };
 

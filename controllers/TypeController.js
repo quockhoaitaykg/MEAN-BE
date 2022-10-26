@@ -17,3 +17,30 @@ exports.createType = async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 };
+
+exports.getTypeById = async (req, res) => {
+  try {
+    const type = await typeService.getTypeById(req.params.id);
+    res.json({ data: type, status: "success" });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
+ 
+exports.updateType = async (req, res) => {
+  try {
+    const type = await typeService.updateType(req.params.id, req.body);
+    res.json({status: "success" });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
+ 
+exports.deleteType = async (req, res) => {
+  try {
+    const type = await typeService.deleteType(req.params.id);
+    res.json({status: "success" });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
