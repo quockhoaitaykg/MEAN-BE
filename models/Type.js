@@ -14,4 +14,4 @@ const typeSchema = new Schema({
 autoIncrement.initialize(mongoose.connection);
 typeSchema.plugin(autoIncrement.plugin, "Type")
  
-module.exports = mongoose.model("Type", typeSchema);
+module.exports = mongoose.model("Type", typeSchema, "Type");

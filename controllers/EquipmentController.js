@@ -17,3 +17,12 @@ exports.createEquipment = async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 };
+
+exports.getEquipmentById = async (req, res) => {
+  try {
+    const equip = await equipmentService.getEquipmentById(req.params.id);
+    res.json({ data: equip, status: "success" });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};

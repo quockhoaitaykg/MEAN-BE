@@ -6,7 +6,7 @@ const equipmentSchema = new Schema({
   name: String,
   status: Boolean,
   description: String,
-  type: [{ type: Schema.Types.ObjectId, ref: "Type" }],
+  typeId: Number,
   createdAt: {
     type: Date,
     default: Date.now,
