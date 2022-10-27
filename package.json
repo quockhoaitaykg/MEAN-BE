@@ -1,7 +1,6 @@
 {
   "name": "mean-be",
   "version": "1.0.0",
-  "start": "node app.js",
   "engines": {
     "node": "16.14.0",
     "npm": "8.19.2"
@@ -9,6 +8,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
