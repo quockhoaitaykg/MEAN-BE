@@ -26,3 +26,21 @@ exports.getEquipmentById = async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 };
+
+exports.updateEquipment = async (req, res) => {
+  try {
+    const type = await equipmentService.updateEquipment(req.params.id, req.body);
+    res.json({ status: "success" });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
+
+exports.deleteEquipment = async (req, res) => {
+  try {
+    await equipmentService.deleteEquipment(req.params.id);
+    res.json({ status: "success" })
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};

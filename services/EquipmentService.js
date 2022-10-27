@@ -12,10 +12,10 @@ exports.getEquipmentById = async (id) => {
   return await equipmentModel.findById(id);
 };
 
-// exports.updateType = async (id, p) => {
-//   return await typeModel.findByIdAndUpdate(id, p);
-// };
+exports.updateEquipment= async (id, p) => {
+  return await equipmentModel.findByIdAndUpdate(id, p);
+};
 
-// exports.deleteType = async (id) => {
-//   return await typeModel.findByIdAndDelete(id);
-// };
+exports.deleteEquipment = async (id) => {
+  return await equipmentModel.findByIdAndDelete(id);
+};
