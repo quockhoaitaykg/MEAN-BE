@@ -1,7 +1,16 @@
 const equipmentModel = require("../models/Equipment");
 
 exports.getAllEquipments = async () => {
-  return await equipmentModel.find();
+  return await equipmentModel.aggregate([
+    { $lookup:
+       {
+         from: 'types',
+         localField: 'type_id',
+         foreignField: '_id',
+         as: 'equip_type'
+       }
+     }
+    ]);
 };
 
 exports.createEquipment = async (p) => {

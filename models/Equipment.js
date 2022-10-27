@@ -6,7 +6,7 @@ const equipmentSchema = new Schema({
   name: String,
   status: Boolean,
   description: String,
-  typeId: Number,
+  type_id: Number,
   createdAt: {
     type: Date,
     default: Date.now,
