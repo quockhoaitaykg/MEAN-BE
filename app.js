@@ -4,12 +4,14 @@ const mongoose = require("mongoose");
 const typeRouter = require("./routes/TypeRoute");
 const equipmentRouter = require("./routes/EquipmentRoute");
 const empRouter = require("./routes/EmployeeRoute");
+const equipEmpRouter = require("./routes/EquipEmpRoute");
  
 //middleware
 app.use(express.json());
 app.use("/api/types", typeRouter);
 app.use("/api/equipments", equipmentRouter);
 app.use("/api/employee", empRouter);
+app.use("/api/assign", equipEmpRouter);
 
 app.listen(3001, () => {
   console.log("Server is running on port 3001");
