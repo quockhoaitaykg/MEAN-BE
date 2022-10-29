@@ -12,6 +12,7 @@ app.use("/api/types", typeRouter);
 app.use("/api/equipments", equipmentRouter);
 app.use("/api/employee", empRouter);
 app.use("/api/assign", equipEmpRouter);
+app.set('trust proxy', true);
 
 app.listen(3001, () => {
   console.log("Server is running on port 3001");
